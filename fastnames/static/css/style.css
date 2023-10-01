@@ -1,0 +1,108 @@
+:root {
+    --main-bg-color: hsl(0, 0%, 10%) !important;
+    --sec-bg-color: hsl(0, 0%, 13%) !important;
+    --third-bg-color: hsl(0, 0%, 19%) !important;
+
+    --badge-bg-color: hsl(291, 18%, 22%) !important;
+
+    --test-color: hsl(0, 64%, 74%) !important;
+
+    --accent-color: hsl(0, 0%, 89%) !important;
+    --current-color: hsl(0, 0%, 70%) !important;
+    --complement-color: hsl(0, 0%, 57%) !important;
+    --low-color: hsl(0, 0%, 65%) !important;
+  }
+
+.bg-dark-main {
+    background-color: var(--main-bg-color)
+}
+
+.bg-dark-sec {
+    background-color: var(--sec-bg-color)
+}
+
+.label {
+    background-color: var(--badge-bg-color);
+    font-size: 0.7rem;
+}
+
+.meta {
+    color: var(--low-color);
+    font-size: 0.8rem;
+}
+
+.bg-test {
+    background-color: var(--test-color)
+}
+
+.mytable {
+    background-color: var(--sec-bg-color);
+    border-color: var(--low-color);
+    border-radius: 7px;
+}
+
+.mytable-head {
+    background-color: var(--sec-bg-color);
+    border-bottom: 1px solid;
+    border-color: var(--low-color);
+}
+
+.form-control {
+    border-color: var(--complement-color);
+    box-shadow: 0 0 0px 1000px var(--third-bg-color) !important;
+    -webkit-text-fill-color: var(--accent-color);
+    -webkit-box-shadow: 0 0 0px 1000px var(--third-bg-color) inset !important;
+    background-color: var(--sec-bg-color);
+    caret-color: var(--accent-color);
+}
+
+.form-control::placeholder {
+    color: var(--complement-color);
+    -webkit-text-fill-color: var(--complement-color);
+    opacity: 1; /* Firefox */
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+}
+
+.form-control:focus::placeholder {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+}
+
+.text-main {
+    color: var(--accent-color);
+}
+
+.text-sec {
+    color: var(--complement-color);
+}
+
+.btn-outline-light {
+    color: var(--complement-color);
+    border-color: var(--complement-color);
+    background-color: var(--sec-bg-color);
+}
+
+.dark_link,
+.dark_link:visited {
+    color: var(--complement-color);
+    text-decoration: none;
+}
+
+.dark_link:active,
+.dark_link:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.current_link,
+.current_link:visited {
+    color: var(--current-color);
+}
+
+.gap {
+    column-gap: 3rem;
+}

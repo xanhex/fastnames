@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark-sec">
+  <div class="container px-4">
+    <ul class="navbar-nav w-100 justify-content-center gap">
+      <li class="nav-item text-center">
+        <a class="dark_link fs-6{% if request.url == request.url_for('home') %} current_link{% endif %}"
+            href="/">Pick a nickname</a>
+      </li>
+      <li class="nav-item text-center">
+          <a class="dark_link fs-6{% if request.url == request.url_for('add_nicknames') %} current_link{% endif %}"
+          href="/add/">Add nicknames</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+
+  postgres_db:
+    container_name: fastnames_db
+    image: postgres:13.10
+    restart: always
+    volumes:
+      - database:/var/lib/postgresql/data/
+    env_file:
+      - fastnames/.env
+
+  fastnames:
+    container_name: fastnames
+    build: .
+    restart: always
+    env_file:
+      - fastnames/.env
+    depends_on:
+      - postgres_db
+    ports:
+      - 8000:8000
+
+volumes:
+  database:

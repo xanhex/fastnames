@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache
+
+# Environments
+.env
+.venv/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# DB
+*.sqlite3
+*.db
+
+# MyPy
+.mypy_cache
+
+# Additional
+Makefile
+requirements_dev.txt
+setup.cfg
+pyproject.toml
+test.http

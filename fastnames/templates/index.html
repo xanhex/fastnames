@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Pick a nickname{% endblock title %}
+{% block content %}
+  <div class="container p-4">
+    <form action = "/" method = "post" class="row justify-content-center">
+      <div class="col-8 col-sm-6 col-md-4">
+        <p class="col text-sec">You can specify what nicknames should start with</p>
+        <div class="row justify-content-center">
+          <div class="form-group col-3">
+            <input type="text" class="form-control" name="male_start" placeholder="Male">
+          </div>
+          <div class="form-group col-3">
+            <input type="text" class="form-control" name="female_start" placeholder="Female">
+          </div>
+          <div class="col-6">
+            <button type="submit" class="btn btn-outline-light">Get nicknames</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row justify-content-center my-5">
+      <div class="col-8 col-sm-8 mytable p-3">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <h6 class="text-sec mb-3">Male nicknames</h5>
+            {% if males %}
+              {% for male in males %}
+              <div><a class="dark_link" href="#0" onClick="toClickbroard(this); return false;">{{ male }}</a></div>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="col-6">
+            <h6 class="text-sec mb-3">Female nicknames</h5>
+            {% if females %}
+              {% for female in females %}
+                <div><a class="dark_link" href="#0" onClick="toClickbroard(this); return false;">{{ female }}</a></div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+  </div>
+{% endblock %}
