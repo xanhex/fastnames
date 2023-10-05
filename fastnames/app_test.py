@@ -14,12 +14,18 @@ def client():
 
 
 def test_home_get(client: TestClient) -> None:
-    """Test home page availability."""
+    """Test home route."""
     response = client.get('/')
     assert response.status_code == HTTPStatus.OK
 
 
 def test_add_nicknames_get(client: TestClient) -> None:
-    """Test add_nicknames page availability."""
+    """Test /add/ route."""
     response = client.get('/add/')
+    assert response.status_code == HTTPStatus.OK
+
+
+def test_get_names(client: TestClient) -> None:
+    """Test /get-names/ route."""
+    response = client.get('/get-names/')
     assert response.status_code == HTTPStatus.OK

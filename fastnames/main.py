@@ -117,6 +117,18 @@ async def add_nicknames(
     return templates.TemplateResponse('add.html', context)
 
 
+@app.get('/get-names')
+async def get_names(
+    startswith: str | None = None,
+    limit: int = 20,
+) -> dict[str, list[schemas.Nickname]]:
+    """Get nicknames in JSON format."""
+    return {
+        'males': await get_nicknames(models.Male, limit, startswith),
+        'females': await get_nicknames(models.Female, limit, startswith),
+    }
+
+
 @app.get('/info')
 async def info(settings: Annotated[config.Settings, Depends(get_settings)]):
     """Get app info from config."""
